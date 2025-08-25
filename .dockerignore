@@ -1,0 +1,38 @@
+# Archivos de Git
+.git
+.gitignore
+
+# Archivos de Maven
+target/
+!target/*.jar
+.mvn/
+mvnw
+mvnw.cmd
+
+# Archivos de IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentación
+README.md
+*.md 
