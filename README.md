@@ -14,6 +14,24 @@ API REST reactiva para gestión de matrículas estudiantiles desarrollada con **
 - **Documentación OpenAPI** con Swagger UI
 - **Containerización** con Docker y Docker Compose
 
+## 🧭 Arquitectura y Diagramas
+
+### Secuencia de Creación de una Matrícula
+
+El flujo valida primero el JWT y los permisos del usuario. Después valida la solicitud, consulta de forma reactiva el estudiante y los cursos, combina ambos resultados con `Mono.zip` y persiste la matrícula en MongoDB.
+
+<p align="center">
+  <img src="./docs/diagrams/enrollment-creation-sequence.png" alt="Diagrama de secuencia para la creación de una matrícula" width="1000">
+</p>
+
+### UML del Modelo de Dominio
+
+Las matrículas contienen los datos del estudiante y de uno o más cursos. Los usuarios, por su parte, reciben los roles utilizados por Spring Security para autorizar cada operación.
+
+<p align="center">
+  <img src="./docs/diagrams/enrollment-domain-model.png" alt="Diagrama UML del modelo de dominio" width="850">
+</p>
+
 ## 🛠️ Tecnologías Utilizadas
 
 ### Backend
@@ -112,3 +130,7 @@ java -jar target/*.jar
 
 ### Usuarios por Defecto
 - **admin** / admin123 (Rol: ADMIN)
+
+---
+
+Última actualización del proyecto: **24 de agosto de 2025**.
